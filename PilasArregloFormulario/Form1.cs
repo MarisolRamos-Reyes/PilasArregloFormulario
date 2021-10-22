@@ -31,7 +31,7 @@ namespace PilasArregloFormulario
                 string nombre = txtNombre.Text;
                 cont = i + 1;
                 NodoPilaLibros NodoNuevo = new NodoPilaLibros(numero, nombre);
-                x.Push(numero);
+                x.Push(numero,NodoNuevo);
             }
             x.Mostrar(lstVLibros);
             //}
