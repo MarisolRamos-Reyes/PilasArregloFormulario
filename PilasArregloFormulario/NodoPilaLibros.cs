@@ -10,13 +10,9 @@ namespace PilasArregloFormulario
     {
         public int numero;
         public string nombre;
-        public NodoPilaLibros siguiente;
+        public string fecha;
 
-        public NodoPilaLibros Siguiente
-        {
-            get { return siguiente; }
-            set { siguiente = value; }
-        }
+        
         public string Nombre
         {
             get { return nombre; }
@@ -27,17 +23,22 @@ namespace PilasArregloFormulario
             get { return numero; }
             set { numero = value; }
         }
+        public string Fecha
+        {
+            get { return fecha; }
+            set { fecha = value; }
+        }
         public NodoPilaLibros()
         {
             numero = 0;
             nombre = "";
-            siguiente = null;
+            fecha = "";
         }
-        public NodoPilaLibros(int num, string nomb)
+        public NodoPilaLibros(int num, string nomb, string f)
         {
             numero = num;
             nombre = nomb;
-            siguiente = null;
+            fecha = f;
         }
     }
 }

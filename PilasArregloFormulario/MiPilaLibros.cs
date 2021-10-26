@@ -7,41 +7,49 @@ using System.Windows.Forms;
 
 namespace PilasArregloFormulario
 {
-    class MiPilaLibros:NodoPilaLibros
+    class MiPilaLibros
     {
-        public NodoPilaLibros _tope;
-        public NodoPilaLibros Tope
+        public int numero;
+        public string nombre;
+        public string fecha;
+        public string Nombre
         {
-            get { return _tope; }
-            set { _tope = value; }
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        public int Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
+        public string Fecha
+        {
+            get { return fecha; }
+            set { fecha = value; }
         }
         public MiPilaLibros()
         {
-            _tope = null;
+            numero = 0;
+            nombre = "";
+            fecha = "";
         }
-        public void Push (int valor, NodoPilaLibros unNodo)
-        {
-            unNodo.numero = valor;
-            if (_tope == null)
-            {
-                _tope = unNodo;
-                return;
-            }
-            unNodo.siguiente = _tope;
-            _tope = unNodo;
-        }
-        public void Mostrar(ListView caja)
-        {
-            caja.Items.Clear();
-            NodoPilaLibros t = _tope;
-            while (t != null) 
-            {
-                ListViewItem datos = new ListViewItem
-                    (Convert.ToString(t.numero));
-                datos.SubItems.Add(t.nombre);
-                caja.Items.Add(datos);
-                t = t.Siguiente;
-            }
-        }
+        //public MiPilaLibros[]Push(MiPilaLibros[]A, int i)
+        //{
+        //    int numero = int.Parse(txtNumero.Text);
+        //    string nombre = txtNombre.Text;
+        //}
+        //public void Mostrar(ListView caja)
+        //{
+        //    caja.Items.Clear();
+        //    NodoPilaLibros t = _tope;
+        //    while (t != null) 
+        //    {
+        //        ListViewItem datos = new ListViewItem
+        //            (Convert.ToString(t.numero));
+        //        datos.SubItems.Add(t.nombre);
+        //        caja.Items.Add(datos);
+        //        t = t.Siguiente;
+        //    }
+        //}
     }
 }
